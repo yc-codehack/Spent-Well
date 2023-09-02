@@ -1,10 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import ReactDOM from "react-dom/client";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+import App from "./App.tsx";
+import { GlobalProvider } from "./contexts/global-provider";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+	<GlobalProvider>
+		<App />
+	</GlobalProvider>
+);
